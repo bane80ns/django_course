@@ -4,8 +4,6 @@ from django.http import HttpResponse
 
 def homepage(request):
 
-    context = {'first_name': 'Brann'}
-
     return render(request, 'crm/index.html')
 
 
