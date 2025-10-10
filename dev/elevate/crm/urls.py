@@ -8,11 +8,13 @@ from . import views
 
 urlpatterns = [
 
-    path('', views.homepage),
+    path('', views.homepage, name=''),
 
-    path('task', views.task),
+    path('view-tasks', views.tasks, name='view-tasks'),
 
-    path('register', views.register),
+    path('register', views.register, name='register'),
+
+    path('create-task', views.create_task, name='create-task'),
         
 ]
 
