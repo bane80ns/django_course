@@ -42,6 +42,32 @@ def tasks(request):
     return render(request, 'crm/view-tasks.html', context)
 
 
+#CRUD - Update Task
+def update_task(request, pk):
+
+    task = Task.objects.get(id=pk)
+
+    form = TaskForm(instance=task)
+
+    if request.method == 'POST':
+        
+        form = TaskForm(request.POST, instance=task)
+
+        if form.is_valid():
+            
+            form.save()
+
+            return redirect('view-tasks')
+        
+    context = {'UpdateTask': form}
+
+    return render (request, 'crm/update-task.html', context)
+
+        
+
+
+
+
 # Registration web page
 def register(request):
 
