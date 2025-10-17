@@ -30,8 +30,11 @@
 
             <a href= "{% url 'update-task' task.id %}"> Update Task </a>
 
-            <br>
+            &nbsp;
 
+            <a href= "{% url 'delete-task' task.id %}"> Delete Task </a>
+
+            <br>
 
         {% endfor %}
 

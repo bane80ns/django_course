@@ -1,5 +1,21 @@
+
+{% load static %}
+
 <html> 
 
+    <head>
+
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+
+
+    </head>
+
+    
+    
+    
+    
     <h1> Website under development </h1>
 
     <hr>
@@ -18,6 +34,10 @@
     
     <a href="{% url 'register' %}"> Register </a>
 
+     &nbsp;
+    
+    <a href="{% url 'my-login' %}"> Login </a>
+
     <hr>
 
     {% block content %}
@@ -27,7 +47,7 @@
 
 
 
-
+    <script src="{% static 'js/app.js' %}"></script>
 
 
 </html>

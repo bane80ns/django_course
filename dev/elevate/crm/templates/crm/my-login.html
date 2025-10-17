@@ -4,23 +4,24 @@
 
     {% block content %}
 
-        <h3> Register Here! </h3>
+        <h3> Login Here! </h3>
 
-        <p> This is where you can create your account. </p>
+        <p> This is where you can login to your account. </p>
 
         <hr>
 
         <form method="POST" autocomplete="off" enctype="multipart/form-data">
 
             {% csrf_token %}
-
-            {{ RegistrationForm.as_p }}
-
+            
+            {{LoginForm.as_p}}
             
 
             
 
-            <input type="submit" value="Create account"/>
+            
+
+            <input type="submit" value="Login"/>
         
 
         </form>
